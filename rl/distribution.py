@@ -33,7 +33,7 @@ class Distribution(ABC, Generic[A]):
         self,
         f: Callable[[A], float]
     ) -> float:
-        '''Return the expecation of f(X) where X is the
+        '''Return the expectation of f(X) where X is the
         random variable for the distribution and f is an
         arbitrary function from X to float
 
