@@ -43,12 +43,12 @@ class SimpleInventoryMRP(MarkovRewardProcess[InventoryState]):
             ip: int = state.state.inventory_position()
             next_state: InventoryState = InventoryState(
                 max(ip - demand_sample, 0),
-                max(self.capacity - ip, 0)
+                max(self.capacity - ip, 0)  #see page P81
             )
             reward: float = - self.holding_cost * state.on_hand\
                 - self.stockout_cost * max(demand_sample - ip, 0)
             return NonTerminal(next_state), reward
-
+            #define a sampler here
         return SampledDistribution(sample_next_state_reward)
 
 

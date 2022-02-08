@@ -19,12 +19,13 @@ X = TypeVar('X')
 class State(ABC, Generic[S]):
     state: S
 
+    #concrete method
     def on_non_terminal(
         self,
         f: Callable[[NonTerminal[S]], X],
         default: X
     ) -> X:
-        if isinstance(self, NonTerminal):
+        if isinstance(self, NonTerminal): #tell if self is an instantiation of one of its subclass
             return f(self)
         else:
             return default
@@ -44,7 +45,7 @@ class MarkovProcess(ABC, Generic[S]):
     '''A Markov process with states of type S.
     '''
     @abstractmethod
-    def transition(self, state: NonTerminal[S]) -> Distribution[State[S]]:
+    def transition(self, state: NonTerminal[S]) -> Distribution[State[S]]:  #transition is all you need to implement when instantiating
         '''Given a state of the process, returns a distribution of
         the next states.  Returning None means we are in a terminal state.
         '''
@@ -60,14 +61,14 @@ class MarkovProcess(ABC, Generic[S]):
         subsequent states forever or until we hit a terminal state.
         '''
 
-        state: State[S] = start_state_distribution.sample()
+        state: State[S] = start_state_distribution.sample() #start to create a simulator
         yield state
 
         while isinstance(state, NonTerminal):
             state = self.transition(state).sample()
-            yield state
+            yield state  #end creating the simulator
 
-    def traces(
+    def traces(  #trace the simulator
             self,
             start_state_distribution: Distribution[NonTerminal[S]]
     ) -> Iterable[Iterable[State[S]]]:
@@ -166,7 +167,7 @@ class TransitionStep(Generic[S]):
     next_state: State[S]
     reward: float
 
-    def add_return(self, γ: float, return_: float) -> ReturnStep[S]:
+    def add_return(self, γ: float, return_: float) -> ReturnStep[S]:  #why put this method here rather in the subclass: ReturnStep ? Because we can add return to any TransitionStep
         '''Given a γ and the return from 'next_state', this annotates the
         transition with a return for 'state'.
 
@@ -185,7 +186,7 @@ class ReturnStep(TransitionStep[S]):
 
 
 class MarkovRewardProcess(MarkovProcess[S]):
-    def transition(self, state: NonTerminal[S]) -> Distribution[State[S]]:
+    def transition(self, state: NonTerminal[S]) -> Distribution[State[S]]:  #which can be implemented once you instantiate "transition_reward"
         '''Transitions the Markov Reward Process, ignoring the generated
         reward (which makes this just a normal Markov Process).
 
@@ -237,7 +238,7 @@ class MarkovRewardProcess(MarkovProcess[S]):
             yield self.simulate_reward(start_state_distribution)
 
 
-StateReward = FiniteDistribution[Tuple[State[S], float]]
+StateReward = FiniteDistribution[Tuple[State[S], float]]  #Still an abstract class but with constrained typing
 RewardTransition = Mapping[NonTerminal[S], StateReward[S]]
 
 
@@ -254,13 +255,13 @@ class FiniteMarkovRewardProcess(FiniteMarkovProcess[S],
         transition_map: Dict[S, FiniteDistribution[S]] = {}
 
         for state, trans in transition_reward_map.items():
-            probabilities: Dict[S, float] = defaultdict(float)
+            probabilities: Dict[S, float] = defaultdict(float)  #define a dictionary for {S -> Prob}, for S -> {S -> Prob}
             for (next_state, _), probability in trans:
                 probabilities[next_state] += probability
 
-            transition_map[state] = Categorical(probabilities)
+            transition_map[state] = Categorical(probabilities)  #plug in this "dictionary" to make a Categorial, to be a transition_map
 
-        super().__init__(transition_map)
+        super().__init__(transition_map)  #initialize the parent class
 
         nt: Set[S] = set(transition_reward_map.keys())
         self.transition_reward_map = {
@@ -268,7 +269,7 @@ class FiniteMarkovRewardProcess(FiniteMarkovProcess[S],
                 {(NonTerminal(s1) if s1 in nt else Terminal(s1), r): p
                  for (s1, r), p in v.table().items()}
             ) for s, v in transition_reward_map.items()
-        }
+        }  #is a dictionary
 
         self.reward_function_vec = np.array([
             sum(probability * reward for (_, reward), probability in
@@ -288,7 +289,7 @@ class FiniteMarkovRewardProcess(FiniteMarkovProcess[S],
         return display
 
     def transition_reward(self, state: NonTerminal[S]) -> StateReward[S]:
-        return self.transition_reward_map[state]
+        return self.transition_reward_map[state]  #transition_reward_map is a disctionary
 
     def get_value_function_vec(self, gamma: float) -> np.ndarray:
         return np.linalg.solve(

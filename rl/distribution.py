@@ -14,7 +14,7 @@ B = TypeVar('B')
 
 
 class Distribution(ABC, Generic[A]):
-    '''A probability distribution that we can sample.
+    '''A probability distribution that we can sample!!! <--- See here.
 
     '''
     @abstractmethod
@@ -64,7 +64,7 @@ class Distribution(ABC, Generic[A]):
         return SampledDistribution(sample)
 
 
-class SampledDistribution(Distribution[A]):
+class SampledDistribution(Distribution[A]):  #Distribution is something that can be .sample(), SampledDistribution means it has already been equipped with a sampler itself.
     '''A distribution defined by a function to sample it.
 
     '''

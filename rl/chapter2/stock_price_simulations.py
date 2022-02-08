@@ -7,9 +7,14 @@ import itertools
 from operator import itemgetter
 from rl.gen_utils.common_funcs import get_logistic_func, get_unit_sigmoid_func
 
+#In this file, the processes are not inherited from the abstract class. So they are meant to give you a sense of how the Markov machine works.
+#For the standard class, refer to stock_price_mp.py
 
 @dataclass
 class Process1:
+    #A Markov chain is a machine that you give me the state, I give you the next state.
+    #So it needs to be equipped with the state class and transition process(prob + sampling).
+
     @dataclass
     class State:
         price: int
@@ -72,12 +77,15 @@ class Process3:
 
 
 def simulation(process, start_state):
+    #Simulator is a generator with some markov chain equipped
+    #Here the classes of process and state are not specified.
+
     state = start_state
     while True:
         yield state
         state = process.next_state(state)
 
-
+#import itertools
 def process1_price_traces(
     start_price: int,
     level_param: int,
@@ -85,13 +93,14 @@ def process1_price_traces(
     time_steps: int,
     num_traces: int
 ) -> np.ndarray:
-    process = Process1(level_param=level_param, alpha1=alpha1)
-    start_state = Process1.State(price=start_price)
+    process = Process1(level_param=level_param, alpha1=alpha1)  #Set the machine
+    start_state = Process1.State(price=start_price)  #set the initial state
     return np.vstack([
         np.fromiter((s.price for s in itertools.islice(
-            simulation(process, start_state),
-            time_steps + 1
-        )), float) for _ in range(num_traces)])
+            simulation(process, start_state), #call the simulator
+            time_steps + 1 #input an infinite simulator with a finite time horizon(+1)
+        )), float) #generate 1-array for an iterable
+        for _ in range(num_traces)]) #store the sequences vertically
 
 
 def process2_price_traces(

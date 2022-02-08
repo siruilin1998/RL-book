@@ -16,3 +16,4 @@ print(Die(6))
 print(isinstance(Die(6), Die)) #True
 print(Die(10) + Die(11))
 print(Die(6) == Die(6))
+

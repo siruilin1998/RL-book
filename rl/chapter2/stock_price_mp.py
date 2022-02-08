@@ -12,12 +12,12 @@ from rl.chapter2.stock_price_simulations import\
 
 
 @dataclass(frozen=True)
-class StateMP1:
+class StateMP1:  #create the state class
     price: int
 
 
 @dataclass
-class StockPriceMP1(MarkovProcess[StateMP1]):
+class StockPriceMP1(MarkovProcess[StateMP1]):  #implement the abstract class
 
     level_param: int  # level to which price mean-reverts
     alpha1: float = 0.25  # strength of mean-reversion (non-negative value)
@@ -75,13 +75,13 @@ class StockPriceMP3(MarkovProcess[StateMP3]):
 
     alpha3: float = 1.0  # strength of reverse-pull (non-negative value)
 
-    def up_prob(self, state: StateMP3) -> float:
+    def up_prob(self, state: StateMP3) -> float:  #By the definition of transition prob
         total = state.num_up_moves + state.num_down_moves
         return get_unit_sigmoid_func(self.alpha3)(
             state.num_down_moves / total
-        ) if total else 0.5
+        ) if total else 0.5  #!interesting syntax
 
-    def transition(
+    def transition(  #override the transition (@abstractmethod)
         self,
         state: NonTerminal[StateMP3]
     ) -> Categorical[State[StateMP3]]:
@@ -94,6 +94,8 @@ class StockPriceMP3(MarkovProcess[StateMP3]):
                 state.state.num_up_moves, state.state.num_down_moves + 1
             )): 1 - up_p
         })
+
+    # Now you see the good thing about defining through an absract class: you have defined simulator for every subclass!
 
 
 def process1_price_traces(
