@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4b47525-9342-4ff9-a021-c9d33905819c" name="Changes" comment="" />
+    <list default="true" id="f4b47525-9342-4ff9-a021-c9d33905819c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rl/midterm_2022/midterm-22-P1-Skeleton.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rl/midterm_2022/midterm-22-P1-Skeleton.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
   <component name="RunManager" selected="Python.Question3">
     <configuration name="Question3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -197,6 +200,7 @@
       <workItem from="1644398974149" duration="6617000" />
       <workItem from="1644406957444" duration="81000" />
       <workItem from="1644407057964" duration="41000" />
+      <workItem from="1644407145058" duration="8834000" />
     </task>
     <servers />
   </component>
