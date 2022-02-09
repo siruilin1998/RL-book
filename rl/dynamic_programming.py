@@ -13,7 +13,7 @@ from rl.policy import FinitePolicy, FiniteDeterministicPolicy
 A = TypeVar('A')
 S = TypeVar('S')
 
-DEFAULT_TOLERANCE = 1e-5
+DEFAULT_TOLERANCE = 1e-2
 
 # A representation of a value function for a finite MDP with states of
 # type S

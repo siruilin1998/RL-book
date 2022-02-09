@@ -149,7 +149,8 @@ if __name__ == '__main__':
 
     print("MDP Value Iteration Optimal Value Function and Optimal Policy")
     print("--------------")
-    opt_vf_vi, opt_policy_vi = value_iteration_result(si_mdp, gamma=user_gamma)
+    opt_vf_vi, opt_policy_vi = \
+        t(si_mdp, gamma=user_gamma)
     pprint(opt_vf_vi)
     print(opt_policy_vi)
     print()
