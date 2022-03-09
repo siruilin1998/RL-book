@@ -92,6 +92,19 @@ class SimpleInventoryMRPFinite(FiniteMarkovRewardProcess[InventoryState]):
                 d[state] = Categorical(sr_probs_map)
         return d
 
+user_capacity = 2
+user_poisson_lambda = 1.0
+user_holding_cost = 1.0
+user_stockout_cost = 10.0
+
+user_gamma = 0.9
+
+si_mrp = SimpleInventoryMRPFinite(
+    capacity=user_capacity,
+    poisson_lambda=user_poisson_lambda,
+    holding_cost=user_holding_cost,
+    stockout_cost=user_stockout_cost
+)
 
 if __name__ == '__main__':
     user_capacity = 2

@@ -45,7 +45,7 @@ def returns(trace, γ, tolerance):
     if max_steps is not None:
         trace = itertools.islice(trace, max_steps * 2)
 
-    *transitions, last_transition = list(trace)
+    *transitions, last_transition = list(trace) # * is the unpacking operator
 
     return_steps = iterate.accumulate(
         reversed(transitions),

@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4b47525-9342-4ff9-a021-c9d33905819c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_11/Assignment_11.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_12/Assignment 12.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_13/Assignment_13.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_14/Assignment_14.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_15/Assignment_15.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_16/Assignment_16.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cme241msande346/learn to code Python/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/cme241msande346/learn to code Python/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rl/chapter2/simple_inventory_mrp.py" beforeDir="false" afterPath="$PROJECT_DIR$/rl/chapter2/simple_inventory_mrp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rl/midterm/Question1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rl/midterm/Question3.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rl/midterm_2022/midterm-22-P1-Skeleton.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rl/midterm_2022/midterm-22-P1-Skeleton.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rl/returns.py" beforeDir="false" afterPath="$PROJECT_DIR$/rl/returns.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -30,10 +42,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/cme241msande346/assignment_2/snake.py" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/rl/midterm/Question3.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/rl/markov_process.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/cme241msande346/learn to code Python/Chapter_Programming and Design.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/cme241msande346/learn to code Python/some basic things.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/rl/monte_carlo.py" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,7 +74,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Question3">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\10246\Documents\GitHub\RL-book\cme241msande346\learn to code Python" />
+      <recent name="C:\Users\10246\Documents\GitHub\RL-book\cme241msande346\Assignment 11" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.stock_price_simulations">
+    <configuration name="Question1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RL-book" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rl/midterm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rl/midterm/Question1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Question3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RL-book" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,35 +191,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="RL-book" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cme241msande346/learn to code Python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cme241msande346/learn to code Python/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.stock_price_simulations" />
+        <item itemvalue="Python.simple_inventory_mrp" />
+        <item itemvalue="Python.Question1" />
         <item itemvalue="Python.Question3" />
         <item itemvalue="Python.simple_inventory_mdp_cap" />
-        <item itemvalue="Python.simple_inventory_mrp" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.stock_price_simulations" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +219,17 @@
       <workItem from="1644406957444" duration="81000" />
       <workItem from="1644407057964" duration="41000" />
       <workItem from="1644407145058" duration="8834000" />
+      <workItem from="1644416351090" duration="435000" />
+      <workItem from="1644416801580" duration="290000" />
+      <workItem from="1644417203636" duration="4335000" />
+      <workItem from="1646074370669" duration="47000" />
+      <workItem from="1646074428394" duration="40000" />
+      <workItem from="1646074478912" duration="25000" />
+      <workItem from="1646074593458" duration="63000" />
+      <workItem from="1646074778639" duration="25530000" />
+      <workItem from="1646521945441" duration="26942000" />
+      <workItem from="1646680051981" duration="39955000" />
+      <workItem from="1646856328203" duration="9061000" />
     </task>
     <servers />
   </component>
@@ -218,12 +247,25 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/rl/td.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RL_book$test.coverage" NAME="test Coverage Results" MODIFIED="1642514263864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cme241msande346/learn to code Python" />
     <SUITE FILE_PATH="coverage/RL_book$Chapter_Programming_and_Design.coverage" NAME="Chapter_Programming and Design Coverage Results" MODIFIED="1642422959709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cme241msande346/learn to code Python" />
-    <SUITE FILE_PATH="coverage/RL_book$simple_inventory_mrp.coverage" NAME="simple_inventory_mrp Coverage Results" MODIFIED="1642520288936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/chapter2" />
+    <SUITE FILE_PATH="coverage/RL_book$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1646427434747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cme241msande346" />
+    <SUITE FILE_PATH="coverage/RL_book$simple_inventory_mrp.coverage" NAME="simple_inventory_mrp Coverage Results" MODIFIED="1646426096688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/chapter2" />
     <SUITE FILE_PATH="coverage/RL_book$Question3.coverage" NAME="Question3 Coverage Results" MODIFIED="1644402691002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/midterm" />
-    <SUITE FILE_PATH="coverage/RL_book$stock_price_simulations.coverage" NAME="stock_price_simulations Coverage Results" MODIFIED="1642509435147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/chapter2" />
+    <SUITE FILE_PATH="coverage/RL_book$Question1.coverage" NAME="Question1 Coverage Results" MODIFIED="1644417404388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/midterm" />
     <SUITE FILE_PATH="coverage/RL_book$simple_inventory_mdp_cap.coverage" NAME="simple_inventory_mdp_cap Coverage Results" MODIFIED="1644388641862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/chapter3" />
+    <SUITE FILE_PATH="coverage/RL_book$stock_price_simulations.coverage" NAME="stock_price_simulations Coverage Results" MODIFIED="1646683165674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rl/chapter2" />
   </component>
 </project>

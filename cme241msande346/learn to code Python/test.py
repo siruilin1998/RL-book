@@ -1,19 +1,44 @@
-class Die():
-    def __init__(self, sides):
-        self.sides = sides
+import numpy as np
+from rl.distribution import Categorical
+from rl.function_approx import Tabular
+from rl.monte_carlo import mc_prediction
 
-    def __repr__(self):
-       return f"Die(sides = {self.sides})"
-       #return "Die(sides = {})".format(self.sides + 1)
+# Construct testing process
+from rl.chapter2.simple_inventory_mrp import InventoryState
+from rl.chapter2.simple_inventory_mrp import SimpleInventoryMRPFinite
+from rl.markov_process import FiniteMarkovRewardProcess
 
-    def __eq__(self, other): #Override __eq__
-        return self.sides == other.sides
+plt.plot(x_vals, y_vals)
+plt.grid()
+plt.xticks([0.0] + event_times)
+plt.xlabel(”Event Timings”, fontsize=15)
+plt.ylabel(”Memory Funtion Values”, fontsize=15)
+plt.title(”Memory Function (Frequency and Recency)”, fontsize=25)
+plt.show()
 
-    def __add__(self, other): #Override __add__
-        return Die(self.sides + other.sides)
+if __name__ == "__main__":
+    user_capacity = 2
+    user_poisson_lambda = 1.0
+    user_holding_cost = 1.0
+    user_stockout_cost = 10.0
+    user_gamma = 0.9
+    si_mrp = SimpleInventoryMRPFinite(
+        capacity=user_capacity,
+        poisson_lambda=user_poisson_lambda,
+        holding_cost=user_holding_cost,
+        stockout_cost=user_stockout_cost
+    )
+    Test_Process = FiniteMarkovRewardProcess(
+        si_mrp.get_transition_reward_map()
+    )
 
-print(Die(6))
-print(isinstance(Die(6), Die)) #True
-print(Die(10) + Die(11))
-print(Die(6) == Die(6))
+    # test using code in the BOOK
+    num_traces = 10
+    Initial_InventoryState = InventoryState(0, 0)
+    traces = np.vstack(
+        [Test_Process.reward_traces(Categorical({Initial_InventoryState: 1.0})) for _ in range(num_traces)])
+
+    approx0 = Tabular()
+    *updates, final_result_mc = list(mc_prediction(traces, approx0, 0.9))
+    print(final_result_mc.values_map)
 
