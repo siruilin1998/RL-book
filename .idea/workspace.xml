@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4b47525-9342-4ff9-a021-c9d33905819c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_2/Assignment_2.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_3/Assignment_3.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_4/Assignment_4.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_5/Assignment_5.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_6/Assignment_6.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cme241msande346/Assignment_8_14/Assignment_8.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cme241msande346/Assignment_15/Assignment_15.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/cme241msande346/Assignment_15/Assignment_15.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cme241msande346/assignment_2/snake.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cme241msande346/Assignment_3/Assignment_3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/cme241msande346/Assignment_3/Assignment_3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cme241msande346/Assignment_5/Assignment_5.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +221,7 @@
       <workItem from="1646856328203" duration="9061000" />
       <workItem from="1646888928715" duration="6664000" />
       <workItem from="1646940908411" duration="15123000" />
-      <workItem from="1647036051865" duration="613000" />
+      <workItem from="1647036051865" duration="12202000" />
     </task>
     <servers />
   </component>
