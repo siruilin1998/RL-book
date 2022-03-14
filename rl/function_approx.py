@@ -386,10 +386,10 @@ class Tabular(FunctionApprox[X]):
 #     degree: int
 #     knots: np.ndarray = field(default_factory=lambda: np.array([]))
 #     coeffs: np.ndarray = field(default_factory=lambda: np.array([]))
-# 
+#
 #     def get_feature_values(self, x_values_seq: Iterable[X]) -> Sequence[float]:
 #         return [self.feature_function(x) for x in x_values_seq]
-# 
+#
 #     def representational_gradient(self, x_value: X) -> BSplineApprox[X]:
 #         feature_val: float = self.feature_function(x_value)
 #         eps: float = 1e-6
@@ -408,12 +408,12 @@ class Tabular(FunctionApprox[X]):
 #                     self.degree
 #                 )(feature_val)
 #             ) / (2 * eps) for i, c in enumerate(self.coeffs)]))
-# 
+#
 #     def evaluate(self, x_values_seq: Iterable[X]) -> np.ndarray:
 #         spline_func: Callable[[Sequence[float]], np.ndarray] = \
 #             BSpline(self.knots, self.coeffs, self.degree)
 #         return spline_func(self.get_feature_values(x_values_seq))
-# 
+#
 #     def update(
 #         self,
 #         xy_vals_seq: Iterable[Tuple[X, float]]
@@ -432,24 +432,24 @@ class Tabular(FunctionApprox[X]):
 #             knots=new_knots,
 #             coeffs=new_coeffs
 #         )
-# 
+#
 #     def solve(
 #         self,
 #         xy_vals_seq: Iterable[Tuple[X, float]],
 #         error_tolerance: Optional[float] = None
 #     ) -> BSplineApprox[X]:
 #         return self.update(xy_vals_seq)
-# 
+#
 #     def within(self, other: FunctionApprox[X], tolerance: float) -> bool:
 #         if isinstance(other, BSplineApprox):
 #             return \
 #                 np.all(np.abs(self.knots - other.knots) <= tolerance).item() \
 #                 and \
 #                 np.all(np.abs(self.coeffs - other.coeffs) <= tolerance).item()
-# 
+#
 #         return False
-# 
-# 
+#
+
 @dataclass(frozen=True)
 class AdamGradient:
     learning_rate: float
